@@ -85,7 +85,7 @@ scale = Vector2(0.8, 0.799)
 max_health = 150
 
 [node name="Archer2" parent="." instance=ExtResource("1_ixs1n")]
-position = Vector2(374, 406)
+position = Vector2(318, 444)
 scale = Vector2(0.8, 0.799)
 atck = "Atck2"
 dash = "Dash2"
