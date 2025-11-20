@@ -2,14 +2,14 @@ extends Enemy
 
 @export var speed: float = 100.0
 @export var attack_range: float = 80.0 
-@export var detect_range: float = 400.0 # Transformei o 400 em variável para facilitar ajustes
+@export var detect_range: float = 400.0
 
-var player: Node2D = null # Este será o alvo atual
+var player: Node2D = null 
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready():
 	super._ready()
-	# Não pegamos mais o player fixo aqui, pois vamos calcular dinamicamente
+	
 	set_state(State.IDLE)
 	add_to_group("Skeleton") 
 
@@ -23,13 +23,13 @@ func _physics_process(delta: float) -> void:
 	if player and is_instance_valid(player):
 		var distance_to_player = global_position.distance_to(player.global_position)
 		
-		# Se estiver muito longe, o esqueleto desiste/fica Idle
+
 		if distance_to_player > detect_range:
 			set_state(State.IDLE)
 			velocity = Vector2.ZERO
 			if anim_sprite.animation != "Idle":
 				anim_sprite.play("Idle")
-			return # Sai da função para não executar o resto
+			return 
 
 		# Lógica de perseguição e ataque
 		var direction_to_player = (player.global_position - global_position).normalized()
@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 			if anim_sprite.animation != "Chase":
 				anim_sprite.play("Chase")
 	else:
-		# Se não houver nenhum player vivo ou válido
+		
 		set_state(State.IDLE)
 		velocity = Vector2.ZERO
 		if anim_sprite.animation != "Idle":
@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 func get_closest_player() -> Node2D:
 	var players = get_tree().get_nodes_in_group("Player")
 	var closest_player = null
-	var min_distance = INF # Começa com infinito
+	var min_distance = INF 
 	
 	for p in players:
 		if is_instance_valid(p):

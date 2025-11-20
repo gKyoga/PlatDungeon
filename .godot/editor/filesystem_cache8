@@ -1,14 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1763648898
+::res://::1763649768
 README.md::TextFile::-1::1763606967::0::1::::<><>::
 ::res://CommandSystem/::1763607003
 Commands.gd::GDScript::-1::1763599576::0::1::::Commands<>Node<>::
 CommandSystem.gd::GDScript::-1::1763599576::0::1::::<>Node<>::
 ::res://Components/::1763607003
 enemy_detect_area.tscn::PackedScene::1963902954458067169::1763599576::0::1::::<><>::res://scenes/enemy_detect_area.gd
-::res://prefabs/::1763607003
+::res://prefabs/::1763649159
 archer2.gd::GDScript::-1::1763599576::0::1::::Archer2<>Player<>::
-Archer.tscn::PackedScene::3260373415931337937::1763599576::0::1::::<><>::res://scripts/Player/Archer.gd<>uid://cefiqj6fenbps::::res://prefabs/arrow.tscn<>uid://b8owsu3rljjvj::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Attack01.png<>uid://carlyowb6eibu::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Idle.png<>uid://ddjgbg4nfg54q::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Walk.png<>uid://kwov2daf58pb::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer/Archer-Death.png<>uid://7odjrtdmk8p0::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Attack02.png<>res://scripts/ZPosCalculator.gd<>uid://28lgvdw4gvh6::::res://Components/enemy_detect_area.tscn
+Archer.tscn::PackedScene::3260373415931337937::1763649159::0::1::::<><>::res://scripts/Player/Archer.gd<>uid://cefiqj6fenbps::::res://prefabs/arrow.tscn<>uid://b8owsu3rljjvj::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Attack01.png<>uid://carlyowb6eibu::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Idle.png<>uid://ddjgbg4nfg54q::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Walk.png<>uid://kwov2daf58pb::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer/Archer-Death.png<>uid://7odjrtdmk8p0::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Attack02.png<>res://scripts/ZPosCalculator.gd<>uid://28lgvdw4gvh6::::res://Components/enemy_detect_area.tscn
 arrow.tscn::PackedScene::5064433460185363868::1763599576::0::1::::<><>::res://scripts/Weapons/Arrow.gd<>uid://c47dq8f76gst6::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Arrow(Projectile)/Arrow01(32x32).png
 BossOrc.tscn::PackedScene::414060047932491641::1763599576::0::1::::<><>::res://scripts/Enemy/boss_orc.gd<>res://scripts/ZPosCalculator.gd<>uid://dy4jpvg5h2d5i::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Death.png<>uid://dp5inrkdn0nyq::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Attack03.png<>uid://m3vmhlhxu5w::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Idle.png<>uid://dxmx6gdesar5m::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Walk.png<>uid://dy4rx5blfcedj::::res://prefabs/UI/HealthBar.tscn
 mago.tscn::PackedScene::7066678648997782389::1763599576::0::1::::<><>::res://scripts/Enemy/Skeleton.gd
@@ -17,8 +17,8 @@ Swordsman.tscn::PackedScene::8017618684231269912::1763599576::0::1::::<><>::res:
 ::res://prefabs/UI/::1763607003
 HealthBar.tscn::PackedScene::8904736093148519807::1763599576::0::1::::<><>::res://scripts/UI/HealthBar.gd
 PlayerHealthBar.tscn::PackedScene::5029172091647496805::1763599576::0::1::::<><>::res://scripts/UI/HealthBar.gd
-::res://scenes/::1763608399
-background.tscn::PackedScene::9209485195123794647::1763608399::0::1::::<><>::uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>res://CommandSystem/CommandSystem.gd<>res://scripts/UI/PlayerHealthBar.gd<>res://CommandSystem/Commands.gd<>res://scripts/UI/ScoreUI.gd<>uid://sfthdmw8xcgf::::res://prefabs/Skeleton.tscn<>res://scripts/GameManager.gd<>uid://f5trj24sa8k8::::res://prefabs/BossOrc.tscn
+::res://scenes/::1763649159
+background.tscn::PackedScene::9209485195123794647::1763649159::0::1::::<><>::uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>res://CommandSystem/CommandSystem.gd<>res://scripts/UI/PlayerHealthBar.gd<>res://CommandSystem/Commands.gd<>res://scripts/UI/ScoreUI.gd<>uid://sfthdmw8xcgf::::res://prefabs/Skeleton.tscn<>res://scripts/GameManager.gd<>uid://f5trj24sa8k8::::res://prefabs/BossOrc.tscn
 enemy_detect_area.gd::GDScript::-1::1763599576::0::1::::<>Area2D<>::
 ::res://scripts/::1763607003
 GameManager.gd::GDScript::-1::1763599576::0::1::::<>Node2D<>::

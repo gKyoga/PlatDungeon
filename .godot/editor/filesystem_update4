@@ -1,2 +1,3 @@
 res://scenes/background.tscn
 res://prefabs/Archer.tscn
+res://scripts/Enemy/Skeleton.gd
