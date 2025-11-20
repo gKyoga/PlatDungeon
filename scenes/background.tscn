@@ -50,10 +50,14 @@ script = ExtResource("2_70kpu")
 player = NodePath("../../Archer")
 
 [node name="PlayerHealthBar2" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
-offset_left = 890.0
-offset_top = 8.0
-offset_right = 1145.0
-offset_bottom = 39.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -262.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 38.0
+grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_lrv5y")
 theme_override_styles/fill = SubResource("StyleBoxFlat_d3gfs")
 value = 100.0
@@ -61,16 +65,16 @@ script = ExtResource("2_70kpu")
 player = NodePath("../../Archer2")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -560.0
-offset_top = 8.0
-offset_right = -504.0
-offset_bottom = 31.0
-grow_horizontal = 0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -28.0
+offset_right = 28.0
+offset_bottom = 23.0
+grow_horizontal = 2
 scale = Vector2(1.6, 1.6)
 text = "Score 0"
+horizontal_alignment = 1
 script = ExtResource("3_oiu4j")
 
 [node name="Commands" type="Node" parent="."]
