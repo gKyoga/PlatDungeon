@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmh2ajv206705"]
+
+[ext_resource type="Script" path="res://scripts/Enemy/Skeleton.gd" id="1_w58xf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g5mpn"]
+animations = []
+
+[node name="Mago" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_w58xf")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_g5mpn")
+animation = &""

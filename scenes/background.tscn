@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://d4he41igw7o84"]
+
+[ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="1_ixs1n"]
+[ext_resource type="Script" path="res://CommandSystem/CommandSystem.gd" id="1_u3rg6"]
+[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="2_70kpu"]
+[ext_resource type="Script" path="res://CommandSystem/Commands.gd" id="3_5la77"]
+[ext_resource type="Script" path="res://scripts/UI/ScoreUI.gd" id="3_oiu4j"]
+[ext_resource type="PackedScene" uid="uid://sfthdmw8xcgf" path="res://prefabs/Skeleton.tscn" id="4_hain3"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="7_815g5"]
+[ext_resource type="PackedScene" uid="uid://f5trj24sa8k8" path="res://prefabs/BossOrc.tscn" id="8_70fvo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lrv5y"]
+bg_color = Color(0.064775, 0.259655, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3gfs"]
+bg_color = Color(0.27154, 0.62599, 0.247709, 1)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_u3rg6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 21.0
+offset_top = 424.0
+offset_right = 526.0
+offset_bottom = 556.0
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+offset_left = 15.0
+offset_top = 583.0
+offset_right = 506.0
+offset_bottom = 639.0
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 261.0
+offset_bottom = 38.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lrv5y")
+theme_override_styles/fill = SubResource("StyleBoxFlat_d3gfs")
+value = 100.0
+script = ExtResource("2_70kpu")
+player = NodePath("../../Archer")
+
+[node name="PlayerHealthBar2" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+offset_left = 890.0
+offset_top = 8.0
+offset_right = 1145.0
+offset_bottom = 39.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lrv5y")
+theme_override_styles/fill = SubResource("StyleBoxFlat_d3gfs")
+value = 100.0
+script = ExtResource("2_70kpu")
+player = NodePath("../../Archer2")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -560.0
+offset_top = 8.0
+offset_right = -504.0
+offset_bottom = 31.0
+grow_horizontal = 0
+scale = Vector2(1.6, 1.6)
+text = "Score 0"
+script = ExtResource("3_oiu4j")
+
+[node name="Commands" type="Node" parent="."]
+script = ExtResource("3_5la77")
+
+[node name="Archer" parent="." instance=ExtResource("1_ixs1n")]
+scale = Vector2(0.8, 0.799)
+max_health = 150
+
+[node name="Archer2" parent="." instance=ExtResource("1_ixs1n")]
+position = Vector2(374, 406)
+scale = Vector2(0.8, 0.799)
+atck = "Atck2"
+dash = "Dash2"
+left = "Left2"
+right = "Right2"
+up = "Up2"
+down = "Down2"
+max_health = 100
+
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("7_815g5")
+skeleton_scene = ExtResource("4_hain3")
+boss_orc_scene = ExtResource("8_70fvo")

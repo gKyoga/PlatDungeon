@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4he41igw7o84"]
+
+[ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="1_ixs1n"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Archer" parent="." instance=ExtResource("1_ixs1n")]
+position = Vector2(564, 273)

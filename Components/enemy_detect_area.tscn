@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://28lgvdw4gvh6"]
+
+[ext_resource type="Script" path="res://scenes/enemy_detect_area.gd" id="1_a4lqg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ajw1"]
+radius = 466.0
+
+[node name="EnemyDetectArea" type="Area2D"]
+position = Vector2(0, 1)
+collision_mask = 4
+script = ExtResource("1_a4lqg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8ajw1")
+debug_color = Color(0.835509, 0.356613, 0.410919, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
