@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	if current_state == State.DEAD:
 		return
 	
-	# Busca o jogador mais próximo a cada frame
+	#Busca o jogador mais próximo a cada frame
 	player = get_closest_player()
 
 	if player and is_instance_valid(player):
