@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bmpl4yem60uf6"]
+[gd_scene load_steps=47 format=3 uid="uid://bmpl4yem60uf6"]
 
 [ext_resource type="Script" path="res://scripts/Player/Archer.gd" id="1_uktf1"]
 [ext_resource type="PackedScene" uid="uid://cefiqj6fenbps" path="res://prefabs/arrow.tscn" id="2_3x18r"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://carlyowb6eibu" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Idle.png" id="3_xt176"]
 [ext_resource type="Texture2D" uid="uid://ddjgbg4nfg54q" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Walk.png" id="4_ar241"]
 [ext_resource type="Texture2D" uid="uid://kwov2daf58pb" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer/Archer-Death.png" id="5_sa4c4"]
-[ext_resource type="Texture2D" uid="uid://7odjrtdmk8p0" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Attack02.png" id="6_5p2eb"]
 [ext_resource type="Script" path="res://scripts/ZPosCalculator.gd" id="7_dkp20"]
 [ext_resource type="PackedScene" uid="uid://28lgvdw4gvh6" path="res://Components/enemy_detect_area.tscn" id="8_tpcdd"]
 
@@ -118,53 +117,41 @@ region = Rect2(600, 0, 100, 100)
 atlas = ExtResource("4_ar241")
 region = Rect2(700, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_40uqb"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_iodtg"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5dc8a"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_irejx"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(100, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qbfbq"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmplh"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(200, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b48th"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jrkc"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(300, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_225s1"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kddcf"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(400, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fiotv"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwoxa"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(500, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5we18"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw577"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(600, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vna4r"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdq6n"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(700, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bmktu"]
-atlas = ExtResource("6_5p2eb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb8dv"]
+atlas = ExtResource("2_j23cf")
 region = Rect2(800, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4oise"]
-atlas = ExtResource("6_5p2eb")
-region = Rect2(900, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k4e3u"]
-atlas = ExtResource("6_5p2eb")
-region = Rect2(1000, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bb24d"]
-atlas = ExtResource("6_5p2eb")
-region = Rect2(1100, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g5mpn"]
 animations = [{
@@ -271,44 +258,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_40uqb")
+"texture": SubResource("AtlasTexture_iodtg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5dc8a")
+"texture": SubResource("AtlasTexture_irejx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qbfbq")
+"texture": SubResource("AtlasTexture_vmplh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b48th")
+"texture": SubResource("AtlasTexture_5jrkc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_225s1")
+"texture": SubResource("AtlasTexture_kddcf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fiotv")
+"texture": SubResource("AtlasTexture_kwoxa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5we18")
+"texture": SubResource("AtlasTexture_vw577")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vna4r")
+"texture": SubResource("AtlasTexture_fdq6n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bmktu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4oise")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k4e3u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bb24d")
+"texture": SubResource("AtlasTexture_qb8dv")
 }],
 "loop": true,
 "name": &"basic_atack",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vtfq"]
@@ -316,7 +294,7 @@ size = Vector2(56, 86)
 
 [node name="Archer" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
-position = Vector2(666, 324)
+position = Vector2(0, 5)
 collision_mask = 2
 script = ExtResource("1_uktf1")
 Arrow = ExtResource("2_3x18r")
@@ -329,6 +307,7 @@ scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_g5mpn")
 animation = &"basic_atack"
 autoplay = "Idle"
+frame_progress = 0.570167
 
 [node name="Bow" type="Node2D" parent="."]
 

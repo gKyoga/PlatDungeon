@@ -1,6 +1,12 @@
-res://scenes/Level_1.tscn
+res://scenes/Level_3.tscn
 res://scenes/background.tscn
 res://prefabs/Archer.tscn
-res://scenes/Level_3.tscn
+res://scenes/Level_1.tscn
 res://scenes/Level_2.tscn
-res://scripts/Player/player.gd
+res://scripts/Player/Archer.gd
+res://prefabs/arrow.tscn
+res://scripts/Weapons/Arrow.gd
+res://scripts/Enemy/Skeleton.gd
+res://prefabs/Skeleton.tscn
+res://prefabs/archer2.gd
+res://scenes/tp.gd
