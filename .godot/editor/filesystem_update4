@@ -1,3 +1,5 @@
+res://scenes/Level_1.tscn
 res://scenes/background.tscn
 res://prefabs/Archer.tscn
-res://scripts/Enemy/Skeleton.gd
+res://scenes/Level_3.tscn
+res://scenes/Level_2.tscn
