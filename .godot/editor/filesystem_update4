@@ -8,3 +8,8 @@ res://prefabs/mage.tscn
 res://prefabs/Skeleton.tscn
 res://prefabs/knight.tscn
 res://prefabs/BossOrc.tscn
+res://scripts/Player/Archer.gd
+res://CommandSystem/Commands.gd
+res://scripts/Enemy/Enemy.gd
+res://scripts/Player/player.gd
+res://scripts/Enemy/Skeleton.gd
