@@ -1,25 +1,15 @@
-<<<<<<< HEAD
 res://scenes/Level_3.tscn
 res://scenes/background.tscn
-res://prefabs/Archer.tscn
-res://scenes/Level_1.tscn
 res://scenes/Level_2.tscn
-res://scripts/Player/Archer.gd
-res://prefabs/arrow.tscn
-res://scripts/Weapons/Arrow.gd
-res://scripts/Enemy/Skeleton.gd
-res://prefabs/Skeleton.tscn
+res://scenes/Level_1.tscn
 res://prefabs/archer2.gd
-res://scenes/tp.gd
-=======
-res://scenes/Level_2.tscn
-res://scenes/background.tscn
-res://prefabs/Archer.tscn
-res://scenes/Level_1.tscn
-res://scenes/Level_3.tscn
-res://prefabs/orc.tscn
+res://scripts/Player/Archer.gd
+res://scripts/Player/player.gd
+res://prefabs/magic.tscn
 res://prefabs/mage.tscn
 res://prefabs/Skeleton.tscn
-res://prefabs/knight.tscn
+res://prefabs/Swordsman.tscn
 res://prefabs/BossOrc.tscn
->>>>>>> origin/Adrielyson
+res://prefabs/UI/HealthBar.tscn
+res://scripts/Enemy/boss_orc.gd
+res://prefabs/orc.tscn

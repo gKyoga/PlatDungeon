@@ -17,10 +17,6 @@ var rotated = 0.0
 #variaveis exportaveis
 @export var Arrow : PackedScene
 
-@export var left = "Left2"
-@export var right = "Right2"
-@export var up = "Up2"
-@export var down = "Down2"
 @export var atck = "Atck"
 @export var dash = "Dash"
 
@@ -78,18 +74,28 @@ func start_rotation():
 	rotating = true
 	rotated = 0.0
 
+# --- DISPARO DE FLECHA ---
 func Arrow_Shoot() -> void:
 	shoting = true
+
 	$AnimatedSprite2D.play("basic_atack")
 
-	# Espera a animação de ataque acabar antes de atirar
-	await $AnimatedSprite2D.animation_finished
+	# Tempo real da animação
+	var anim = "basic_atack"
+	var frames = $AnimatedSprite2D.sprite_frames.get_frame_count(anim)
+	var fps = $AnimatedSprite2D.sprite_frames.get_animation_speed(anim)
+	var anim_time = frames / fps
 
+	# Espera terminar a animação
+	await get_tree().create_timer(anim_time).timeout
+
+	# CRIA A FLECHA APÓS A ANIMAÇÃO
 	var arrow = Arrow.instantiate()
-	arrow.global_position = $Bow.global_position
-	arrow.target = $EnemyDetectArea.enemy_target 
-	
-	owner.add_child(arrow)
+	arrow.global_position = $Bow.global_position + Vector2(-60, -160)
+	arrow.target = $EnemyDetectArea.enemy_target
+	get_tree().current_scene.add_child(arrow)
+
+	shoting = false
 
 
 func die():

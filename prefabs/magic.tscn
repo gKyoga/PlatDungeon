@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4x404r63mqp8"]
+
+[ext_resource type="Script" path="res://scripts/Weapons/Arrow.gd" id="1_pbehx"]
+[ext_resource type="Texture2D" uid="uid://bopruvb36sgkh" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Magic(Projectile)/Wizard-Attack02_Effect.png" id="2_wlhks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl876"]
+atlas = ExtResource("2_wlhks")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg1ff"]
+atlas = ExtResource("2_wlhks")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig53q"]
+atlas = ExtResource("2_wlhks")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flue1"]
+atlas = ExtResource("2_wlhks")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bahi1"]
+atlas = ExtResource("2_wlhks")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmkpg"]
+atlas = ExtResource("2_wlhks")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghp3e"]
+atlas = ExtResource("2_wlhks")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_udnbg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl876")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg1ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig53q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flue1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bahi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmkpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghp3e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehl7y"]
+size = Vector2(117.5, 15)
+
+[node name="Arrow" type="Area2D"]
+position = Vector2(564, 273)
+scale = Vector2(0.5, 0.5)
+collision_mask = 4
+script = ExtResource("1_pbehx")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 0)
+scale = Vector2(5.9375, 5.09375)
+sprite_frames = SubResource("SpriteFrames_udnbg")
+frame_progress = 0.802464
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.25, 0)
+shape = SubResource("RectangleShape2D_ehl7y")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

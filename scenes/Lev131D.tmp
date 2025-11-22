@@ -1,17 +1,16 @@
-[gd_scene load_steps=16 format=4 uid="uid://ik8wosot4wqj"]
+[gd_scene load_steps=14 format=4 uid="uid://ik8wosot4wqj"]
 
-[ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_sm8u4"]
-[ext_resource type="Texture2D" uid="uid://ctlclq6bah0rd" path="res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png" id="2_dr67x"]
-[ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="2_k4tky"]
-[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="3_xgvr5"]
-[ext_resource type="PackedScene" uid="uid://cko85hyuvvflq" path="res://prefabs/mage.tscn" id="5_trvpy"]
-[ext_resource type="PackedScene" uid="uid://b4x404r63mqp8" path="res://prefabs/magic.tscn" id="6_g81wj"]
-[ext_resource type="PackedScene" uid="uid://sfthdmw8xcgf" path="res://prefabs/Skeleton.tscn" id="7_kbw73"]
-[ext_resource type="PackedScene" uid="uid://clqapeiq5yak7" path="res://prefabs/orc.tscn" id="8_h3uah"]
-[ext_resource type="Script" path="res://scenes/tp.gd" id="9_c2lk6"]
+[ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_jn3ee"]
+[ext_resource type="Texture2D" uid="uid://ctlclq6bah0rd" path="res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png" id="2_h1nrl"]
+[ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="2_krjkp"]
+[ext_resource type="PackedScene" uid="uid://sfthdmw8xcgf" path="res://prefabs/Skeleton.tscn" id="4_u0k2j"]
+[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="5_4ahxr"]
+[ext_resource type="PackedScene" uid="uid://clqapeiq5yak7" path="res://prefabs/orc.tscn" id="6_pqi72"]
+[ext_resource type="PackedScene" uid="uid://cko85hyuvvflq" path="res://prefabs/mage.tscn" id="7_3jkpa"]
+[ext_resource type="Script" path="res://prefabs/archer2.gd" id="8_7cp5n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6oyq"]
-texture = ExtResource("1_sm8u4")
+texture = ExtResource("1_jn3ee")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -685,7 +684,7 @@ texture = ExtResource("1_sm8u4")
 29:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_88iby"]
-texture = ExtResource("2_dr67x")
+texture = ExtResource("2_h1nrl")
 14:0/0 = 0
 15:0/0 = 0
 24:0/0 = 0
@@ -1119,9 +1118,6 @@ shadow_size = 1
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukxfc"]
 bg_color = Color(0.27154, 0.62599, 0.247709, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tv0jf"]
-size = Vector2(10.5488, 6.04164)
-
 [node name="Node2D" type="Node2D"]
 position = Vector2(64, 195)
 
@@ -1158,7 +1154,7 @@ offset_bottom = 38.0
 theme_override_styles/background = SubResource("StyleBoxFlat_e0yu1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ukxfc")
 value = 100.0
-script = ExtResource("3_xgvr5")
+script = ExtResource("5_4ahxr")
 player = NodePath("../../Archer")
 metadata/_edit_use_anchors_ = true
 
@@ -1174,111 +1170,92 @@ grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_e0yu1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ukxfc")
 value = 100.0
-script = ExtResource("3_xgvr5")
-player = NodePath("../../Archer2")
+script = ExtResource("5_4ahxr")
+player = NodePath("../../../inimigo/Archer2")
 metadata/_edit_use_anchors_ = true
 
-[node name="Archer" parent="Node2D" instance=ExtResource("2_k4tky")]
+[node name="Archer" parent="Node2D" instance=ExtResource("2_krjkp")]
 position = Vector2(254, 445)
 scale = Vector2(0.8, 0.799)
 max_health = 150
 
-[node name="Archer2" parent="Node2D" instance=ExtResource("5_trvpy")]
-position = Vector2(252, 706)
-Arrow = ExtResource("6_g81wj")
-atck = "Atck2"
-dash = "Dash2"
-left = "Left2"
-right = "Right2"
-up = "Up2"
-down = "Down2"
-
 [node name="inimigo" type="Node2D" parent="."]
 
-[node name="Skeleton9" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton9" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(1090, 263)
 
-[node name="Skeleton10" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton10" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(834, 928)
 
-[node name="Skeleton11" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton11" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(1256, 953)
 
-[node name="Skeleton12" parent="inimigo" instance=ExtResource("7_kbw73")]
-position = Vector2(849, 316)
+[node name="Skeleton12" parent="inimigo" instance=ExtResource("4_u0k2j")]
+position = Vector2(751, 259)
 
-[node name="Skeleton" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(1433, 269)
 
-[node name="Skeleton2" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton2" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(1724, 956)
 
-[node name="Skeleton13" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton13" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(1704, 722)
 
-[node name="Skeleton14" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton14" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(1711, 438)
 
-[node name="Skeleton15" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton15" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(1569, 568)
 
-[node name="Skeleton16" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton16" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(1337, 951)
 
-[node name="Skeleton3" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton3" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3124, 391)
 
-[node name="Skeleton4" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton4" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3178, 881)
 
-[node name="Skeleton5" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton5" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3548, 409)
 
-[node name="Skeleton17" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton17" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3802, 935)
 
-[node name="Skeleton20" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton20" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3384, 945)
 
-[node name="Skeleton21" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton21" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3328, 411)
 
-[node name="Skeleton19" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton19" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3798, 325)
 
-[node name="Skeleton18" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton18" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3372, 647)
 
-[node name="Skeleton6" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton6" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(3612, 862)
 
-[node name="Skeleton7" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton7" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(4035, 387)
 
-[node name="Skeleton8" parent="inimigo" instance=ExtResource("7_kbw73")]
+[node name="Skeleton8" parent="inimigo" instance=ExtResource("4_u0k2j")]
 position = Vector2(4031, 847)
 
-[node name="Skeleton22" parent="inimigo" instance=ExtResource("8_h3uah")]
+[node name="Skeleton22" parent="inimigo" instance=ExtResource("6_pqi72")]
 position = Vector2(2120, 693)
 
-[node name="Skeleton24" parent="inimigo" instance=ExtResource("8_h3uah")]
+[node name="Skeleton24" parent="inimigo" instance=ExtResource("6_pqi72")]
 position = Vector2(2118, 459)
 
-[node name="Skeleton25" parent="inimigo" instance=ExtResource("8_h3uah")]
+[node name="Skeleton25" parent="inimigo" instance=ExtResource("6_pqi72")]
 position = Vector2(2614, 699)
 
-[node name="Skeleton23" parent="inimigo" instance=ExtResource("8_h3uah")]
+[node name="Skeleton23" parent="inimigo" instance=ExtResource("6_pqi72")]
 position = Vector2(2614, 475)
 
-[node name="tp" type="Area2D" parent="."]
-position = Vector2(3148, 260)
-scale = Vector2(11.9166, 6.66579)
-script = ExtResource("9_c2lk6")
-next_scene = "res://scenes/Level_2.tscn"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tp"]
-position = Vector2(94.9487, 57.5717)
-scale = Vector2(0.50424, -1.05839)
-shape = SubResource("RectangleShape2D_tv0jf")
-
-[connection signal="body_entered" from="tp" to="tp" method="_on_body_entered"]
+[node name="Archer2" parent="inimigo" instance=ExtResource("7_3jkpa")]
+position = Vector2(272, 760)
+script = ExtResource("8_7cp5n")

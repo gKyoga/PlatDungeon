@@ -1,6 +1,9 @@
 extends Player
 class_name Archer
 
+
+
+
 # --- Dash ---
 const DASH_SPEED = 900
 const DASH_TIME = 0.2

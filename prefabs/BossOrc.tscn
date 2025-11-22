@@ -1,9 +1,10 @@
-[gd_scene load_steps=38 format=3 uid="uid://f5trj24sa8k8"]
+[gd_scene load_steps=40 format=3 uid="uid://f5trj24sa8k8"]
 
 [ext_resource type="Script" path="res://scripts/Enemy/boss_orc.gd" id="1_aluje"]
 [ext_resource type="Script" path="res://scripts/ZPosCalculator.gd" id="2_g8s2n"]
 [ext_resource type="Texture2D" uid="uid://dy4jpvg5h2d5i" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Death.png" id="2_ua084"]
 [ext_resource type="Texture2D" uid="uid://dp5inrkdn0nyq" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Attack03.png" id="2_vmdb7"]
+[ext_resource type="PackedScene" uid="uid://clqapeiq5yak7" path="res://prefabs/orc.tscn" id="2_yir64"]
 [ext_resource type="Texture2D" uid="uid://m3vmhlhxu5w" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Idle.png" id="3_vmdb7"]
 [ext_resource type="Texture2D" uid="uid://dxmx6gdesar5m" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Walk.png" id="4_gn1ve"]
 [ext_resource type="PackedScene" uid="uid://dy4rx5blfcedj" path="res://prefabs/UI/HealthBar.tscn" id="7_6cmss"]
@@ -231,18 +232,22 @@ size = Vector2(32.5714, 39.3214)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ua084"]
 radius = 39.7145
 
+[sub_resource type="Theme" id="Theme_62kt3"]
+
 [node name="BossOrc" type="CharacterBody2D" groups=["Enemy"]]
 z_index = -1
 texture_filter = 1
 position = Vector2(236, 302)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_aluje")
-max_health = 30
+minion_scene = ExtResource("2_yir64")
+max_health = 50
+attack_damage = 20
 metadata/_custom_type_script = "uid://b83lveipwhy8a"
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(5, 5)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
+scale = Vector2(17, 17)
 sprite_frames = SubResource("SpriteFrames_7odf7")
 animation = &"Chase"
 
@@ -266,8 +271,12 @@ position = Vector2(0.428573, 0.142857)
 shape = SubResource("CircleShape2D_ua084")
 debug_color = Color(0.96716, 0.140343, 0.29849, 0.42)
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
 [node name="HealthBar" parent="." instance=ExtResource("7_6cmss")]
-offset_left = -95.0
-offset_top = -95.0
-offset_right = 109.0
-offset_bottom = -72.0
+offset_left = -137.5
+offset_top = -377.5
+offset_right = 66.5
+offset_bottom = -354.5
+scale = Vector2(2, 2)
+theme = SubResource("Theme_62kt3")
