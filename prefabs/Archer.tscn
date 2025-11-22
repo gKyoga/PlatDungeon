@@ -317,6 +317,7 @@ size = Vector2(56, 86)
 [node name="Archer" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
 position = Vector2(666, 324)
+collision_mask = 2
 script = ExtResource("1_uktf1")
 Arrow = ExtResource("2_3x18r")
 max_health = 50
@@ -329,10 +330,6 @@ sprite_frames = SubResource("SpriteFrames_g5mpn")
 animation = &"basic_atack"
 autoplay = "Idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_2vtfq")
-
 [node name="Bow" type="Node2D" parent="."]
 
 [node name="ZPosCalculator" type="Node2D" parent="."]
@@ -343,3 +340,8 @@ CanMove = true
 [node name="EnemyDetectArea" parent="." instance=ExtResource("8_tpcdd")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 9
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_2vtfq")

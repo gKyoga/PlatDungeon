@@ -56,7 +56,8 @@ func MovePlayer(delta):
 	else:
 		$AnimatedSprite2D.play("Idle")
 	
-	global_position += dir.normalized() * Spd * delta
+	velocity = dir.normalized() * Spd
+	move_and_slide()
 
 func take_damage(amount: int):
 	current_health -= amount

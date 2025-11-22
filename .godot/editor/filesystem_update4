@@ -3,3 +3,4 @@ res://scenes/background.tscn
 res://prefabs/Archer.tscn
 res://scenes/Level_3.tscn
 res://scenes/Level_2.tscn
+res://scripts/Player/player.gd
