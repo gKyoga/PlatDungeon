@@ -17,10 +17,10 @@ var rotated = 0.0
 #variaveis exportaveis
 @export var Arrow : PackedScene
 
-@export var left = "Left"
-@export var right = "Right"
-@export var up = "Up"
-@export var down = "Down"
+@export var left = "Left2"
+@export var right = "Right2"
+@export var up = "Up2"
+@export var down = "Down2"
 @export var atck = "Atck"
 @export var dash = "Dash"
 
@@ -78,17 +78,19 @@ func start_rotation():
 	rotating = true
 	rotated = 0.0
 
-func Arrow_Shoot():
+func Arrow_Shoot() -> void:
 	shoting = true
 	$AnimatedSprite2D.play("basic_atack")
-	get_tree().create_timer(3.0).timeout
- 
+
+	# Espera a animação de ataque acabar antes de atirar
+	await $AnimatedSprite2D.animation_finished
+
 	var arrow = Arrow.instantiate()
 	arrow.global_position = $Bow.global_position
-
 	arrow.target = $EnemyDetectArea.enemy_target 
 	
 	owner.add_child(arrow)
+
 
 func die():
 	set_physics_process(false)

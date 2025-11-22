@@ -7,9 +7,9 @@ var atacking = false
 var target: Node2D = null
 
 # Stats
-var damage = 10.0
+var damage = 3.0
 var atk_codown = 1.0
-var atk_speed = 900
+var atk_speed = 400
 
 
 func _physics_process(delta: float) -> void:
