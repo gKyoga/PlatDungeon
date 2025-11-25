@@ -7,6 +7,10 @@ enum State { IDLE, CHASE, ATTACK, DEAD }
 var current_health: int
 var current_state: State = State.IDLE
 
+var food_scene: PackedScene = load("res://prefabs/food.tscn") 
+@export var drop_chance: float = 0.3
+
+
 @onready var health_bar_instance: ProgressBar = $HealthBar
 
 @export var attack_damage: int = 10
@@ -36,6 +40,13 @@ func die():
 		print("Skeleton died. Skeletons alive: ", Global.skeletons_alive)
 		if Global.skeletons_alive <= 0:
 			Global.all_skeletons_dead.emit()
+
+	# Chance de dropar comida
+	if food_scene and randf() <= drop_chance:
+		var food_instance = food_scene.instantiate() as Food
+		get_parent().add_child(food_instance)
+		food_instance.global_position = self.global_position
+		food_instance.inGame = true
 
 	queue_free()
 

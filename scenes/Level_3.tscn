@@ -2111,6 +2111,8 @@ position = Vector2(2018, 1279)
 speed = 200.0
 attack_range = 100.0
 chase_range = 1000.0
+drop_chance = null
+attack_cooldown = null
 
 [node name="Node2D" type="Node2D" parent="."]
 

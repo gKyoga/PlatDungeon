@@ -13,3 +13,9 @@ res://prefabs/BossOrc.tscn
 res://prefabs/UI/HealthBar.tscn
 res://scripts/Enemy/boss_orc.gd
 res://prefabs/orc.tscn
+res://scenes/tp.gd
+res://scripts/Weapons/Arrow.gd
+res://prefabs/food.tscn
+res://scripts/Enemy/Enemy.gd
+res://prefabs/food.gd
+res://scenes/revive.gd

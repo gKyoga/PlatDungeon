@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://dggamksxvq6mg"]
+[gd_scene load_steps=13 format=4 uid="uid://dggamksxvq6mg"]
 
 [ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_xeb0k"]
 [ext_resource type="Texture2D" uid="uid://ctlclq6bah0rd" path="res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png" id="2_tmoai"]
 [ext_resource type="Script" path="res://scenes/tp.gd" id="4_44wx4"]
 [ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="4_j33cb"]
 [ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="5_w0tep"]
+[ext_resource type="PackedScene" uid="uid://cko85hyuvvflq" path="res://prefabs/mage.tscn" id="6_oqr8i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6oyq"]
 texture = ExtResource("1_xeb0k")
@@ -1150,9 +1151,10 @@ tile_map_data = PackedByteArray("AAABAP3/AAAGAAAAAAABAP7/AAAGAAEAAAABAP//AAAGAAI
 tile_set = SubResource("TileSet_8ufs8")
 
 [node name="tp" type="Area2D" parent="."]
+position = Vector2(3.99552, -4)
 scale = Vector2(11.9166, 6.66579)
 script = ExtResource("4_44wx4")
-next_scene = "res://scenes/Level_3.tscn"
+next_scene = "res://scenes/Level_2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tp"]
 position = Vector2(94.9487, 57.5717)
@@ -1192,20 +1194,17 @@ player = NodePath("../../Archer2")
 metadata/_edit_use_anchors_ = true
 
 [node name="Archer" parent="Node2D" instance=ExtResource("5_w0tep")]
-position = Vector2(254, 445)
+position = Vector2(331.629, 369)
 scale = Vector2(0.8, 0.799)
 max_health = 150
 
-[node name="Archer2" parent="Node2D" instance=ExtResource("5_w0tep")]
-z_index = -1
-position = Vector2(253, 730)
-scale = Vector2(0.8, 0.799)
+[node name="Archer2" parent="Node2D" instance=ExtResource("6_oqr8i")]
+position = Vector2(436.511, 369)
 atck = "Atck2"
 dash = "Dash2"
 left = "Left2"
 right = "Right2"
 up = "Up2"
 down = "Down2"
-max_health = 100
 
 [connection signal="body_entered" from="tp" to="tp" method="_on_body_entered"]

@@ -15,5 +15,9 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		get_tree().change_scene_to_file(next_scene)
-	pass # Replace with function body.
+		# Verifica se existem inimigos na cena
+		var enemies = get_tree().get_nodes_in_group("Enemy")
+		if enemies.size() == 0:
+			get_tree().change_scene_to_file(next_scene)
+		else:
+			print("Ainda existem inimigos na cena!")
