@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://c07rkcjw6ndmk"]
+
+[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="1_t2obd"]
+[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar2.gd" id="2_0kukg"]
+[ext_resource type="Texture2D" uid="uid://dj88ifexp88n4" path="res://Sprits/RPG UI pack - Demo (by Franuka)/UI assets Demo (1x).png" id="3_wja6d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jo7c"]
+bg_color = Color(0.064775, 0.259655, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2vcb"]
+bg_color = Color(0.27154, 0.62599, 0.247709, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veroa"]
+atlas = ExtResource("3_wja6d")
+region = Rect2(0, 48, 46, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v58yi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_veroa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CanvasLayer2" type="CanvasLayer"]
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="."]
+offset_left = 48.0
+offset_top = 32.0
+offset_right = 248.0
+offset_bottom = 56.0
+scale = Vector2(0.884676, 0.666488)
+theme_override_styles/background = SubResource("StyleBoxFlat_7jo7c")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o2vcb")
+value = 100.0
+show_percentage = false
+script = ExtResource("1_t2obd")
+
+[node name="healthbar" type="AnimatedSprite2D" parent="PlayerHealthBar"]
+z_index = -1
+position = Vector2(96.8126, 11.1875)
+scale = Vector2(5.73098, 4.10156)
+sprite_frames = SubResource("SpriteFrames_v58yi")
+
+[node name="PlayerHealthBar2" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -238.0
+offset_top = 34.0
+offset_right = -35.0
+offset_bottom = 56.0
+grow_horizontal = 0
+scale = Vector2(0.943776, 0.727144)
+theme_override_styles/background = SubResource("StyleBoxFlat_7jo7c")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o2vcb")
+value = 100.0
+show_percentage = false
+script = ExtResource("2_0kukg")
+
+[node name="healthbar" type="AnimatedSprite2D" parent="PlayerHealthBar2"]
+z_index = -1
+position = Vector2(95.8125, 9.1875)
+scale = Vector2(5.73098, 4.10156)
+sprite_frames = SubResource("SpriteFrames_v58yi")

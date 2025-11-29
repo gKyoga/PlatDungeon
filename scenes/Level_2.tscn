@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=4 uid="uid://ik8wosot4wqj"]
+[gd_scene load_steps=16 format=4 uid="uid://ik8wosot4wqj"]
 
 [ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_sm8u4"]
 [ext_resource type="Texture2D" uid="uid://ctlclq6bah0rd" path="res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png" id="2_dr67x"]
 [ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="2_k4tky"]
-[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="3_xgvr5"]
 [ext_resource type="PackedScene" uid="uid://cko85hyuvvflq" path="res://prefabs/mage.tscn" id="5_trvpy"]
+[ext_resource type="PackedScene" uid="uid://c07rkcjw6ndmk" path="res://scenes/ui_2.tscn" id="6_35vd4"]
 [ext_resource type="PackedScene" uid="uid://b4x404r63mqp8" path="res://prefabs/magic.tscn" id="6_g81wj"]
 [ext_resource type="PackedScene" uid="uid://sfthdmw8xcgf" path="res://prefabs/Skeleton.tscn" id="7_kbw73"]
 [ext_resource type="PackedScene" uid="uid://clqapeiq5yak7" path="res://prefabs/orc.tscn" id="8_h3uah"]
@@ -1108,18 +1108,6 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_x6oyq")
 sources/1 = SubResource("TileSetAtlasSource_88iby")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0yu1"]
-bg_color = Color(0.064775, 0.259655, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-shadow_size = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukxfc"]
-bg_color = Color(0.27154, 0.62599, 0.247709, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tv0jf"]
 size = Vector2(10.5488, 6.04164)
 
@@ -1152,36 +1140,6 @@ tile_set = SubResource("TileSet_8ufs8")
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="Node2D"]
-
-[node name="PlayerHealthBar" type="ProgressBar" parent="Node2D/CanvasLayer2" node_paths=PackedStringArray("player")]
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 261.0
-offset_bottom = 38.0
-theme_override_styles/background = SubResource("StyleBoxFlat_e0yu1")
-theme_override_styles/fill = SubResource("StyleBoxFlat_ukxfc")
-value = 100.0
-script = ExtResource("3_xgvr5")
-player = NodePath("../../Archer")
-metadata/_edit_use_anchors_ = true
-
-[node name="PlayerHealthBar2" type="ProgressBar" parent="Node2D/CanvasLayer2" node_paths=PackedStringArray("player")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -262.0
-offset_top = 7.0
-offset_right = -7.0
-offset_bottom = 38.0
-grow_horizontal = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_e0yu1")
-theme_override_styles/fill = SubResource("StyleBoxFlat_ukxfc")
-value = 100.0
-script = ExtResource("3_xgvr5")
-player = NodePath("../../Archer2")
-metadata/_edit_use_anchors_ = true
-
 [node name="Archer" parent="Node2D" instance=ExtResource("2_k4tky")]
 position = Vector2(254, 445)
 scale = Vector2(0.8, 0.799)
@@ -1197,232 +1155,84 @@ right = "Right2"
 up = "Up2"
 down = "Down2"
 
+[node name="CanvasLayer2" parent="Node2D" instance=ExtResource("6_35vd4")]
+
 [node name="inimigo" type="Node2D" parent="."]
 
 [node name="Skeleton9" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(1090, 263)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton10" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(834, 928)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton11" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(1256, 953)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton12" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(849, 316)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(1433, 269)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton2" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(1724, 956)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton13" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(1704, 722)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton14" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(1711, 438)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton15" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(1569, 568)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton16" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(1337, 951)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton3" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3124, 391)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton4" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3178, 881)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton5" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3548, 409)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton17" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3802, 935)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton20" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3384, 945)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton21" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3328, 411)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton19" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3798, 325)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton18" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3372, 647)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton6" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(3612, 862)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton7" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(4035, 387)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton8" parent="inimigo" instance=ExtResource("7_kbw73")]
 position = Vector2(4031, 847)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton22" parent="inimigo" instance=ExtResource("8_h3uah")]
 position = Vector2(2120, 693)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton24" parent="inimigo" instance=ExtResource("8_h3uah")]
 position = Vector2(2118, 459)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton25" parent="inimigo" instance=ExtResource("8_h3uah")]
 position = Vector2(2614, 699)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="Skeleton23" parent="inimigo" instance=ExtResource("8_h3uah")]
 position = Vector2(2614, 475)
-speed = null
-attack_range = null
-detect_range = null
-drop_chance = null
-attack_damage = null
-attack_cooldown = null
 
 [node name="tp" type="Area2D" parent="."]
 position = Vector2(3148, 260)

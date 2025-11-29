@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://dggamksxvq6mg"]
+[gd_scene load_steps=11 format=4 uid="uid://dggamksxvq6mg"]
 
 [ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_xeb0k"]
 [ext_resource type="Texture2D" uid="uid://ctlclq6bah0rd" path="res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png" id="2_tmoai"]
 [ext_resource type="Script" path="res://scenes/tp.gd" id="4_44wx4"]
-[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="4_j33cb"]
+[ext_resource type="PackedScene" uid="uid://c07rkcjw6ndmk" path="res://scenes/ui_2.tscn" id="4_128yk"]
 [ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="5_w0tep"]
 [ext_resource type="PackedScene" uid="uid://cko85hyuvvflq" path="res://prefabs/mage.tscn" id="6_oqr8i"]
 
@@ -1112,18 +1112,6 @@ sources/2 = SubResource("TileSetAtlasSource_igweh")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i0ndw"]
 size = Vector2(10.5488, 6.04164)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jo7c"]
-bg_color = Color(0.064775, 0.259655, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-shadow_size = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2vcb"]
-bg_color = Color(0.27154, 0.62599, 0.247709, 1)
-
 [node name="Node2D" type="Node2D"]
 position = Vector2(64, 195)
 scale = Vector2(1.00112, 1)
@@ -1163,35 +1151,7 @@ shape = SubResource("RectangleShape2D_i0ndw")
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="Node2D"]
-
-[node name="PlayerHealthBar" type="ProgressBar" parent="Node2D/CanvasLayer2" node_paths=PackedStringArray("player")]
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 261.0
-offset_bottom = 38.0
-theme_override_styles/background = SubResource("StyleBoxFlat_7jo7c")
-theme_override_styles/fill = SubResource("StyleBoxFlat_o2vcb")
-value = 100.0
-script = ExtResource("4_j33cb")
-player = NodePath("../../Archer")
-metadata/_edit_use_anchors_ = true
-
-[node name="PlayerHealthBar2" type="ProgressBar" parent="Node2D/CanvasLayer2" node_paths=PackedStringArray("player")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -262.0
-offset_top = 7.0
-offset_right = -7.0
-offset_bottom = 38.0
-grow_horizontal = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_7jo7c")
-theme_override_styles/fill = SubResource("StyleBoxFlat_o2vcb")
-value = 100.0
-script = ExtResource("4_j33cb")
-player = NodePath("../../Archer2")
-metadata/_edit_use_anchors_ = true
+[node name="CanvasLayer2" parent="Node2D" instance=ExtResource("4_128yk")]
 
 [node name="Archer" parent="Node2D" instance=ExtResource("5_w0tep")]
 position = Vector2(331.629, 369)

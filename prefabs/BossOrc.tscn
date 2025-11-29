@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://f5trj24sa8k8"]
+[gd_scene load_steps=43 format=3 uid="uid://f5trj24sa8k8"]
 
 [ext_resource type="Script" path="res://scripts/Enemy/boss_orc.gd" id="1_aluje"]
 [ext_resource type="Script" path="res://scripts/ZPosCalculator.gd" id="2_g8s2n"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://m3vmhlhxu5w" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Idle.png" id="3_vmdb7"]
 [ext_resource type="Texture2D" uid="uid://dxmx6gdesar5m" path="res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Walk.png" id="4_gn1ve"]
 [ext_resource type="PackedScene" uid="uid://dy4rx5blfcedj" path="res://prefabs/UI/HealthBar.tscn" id="7_6cmss"]
+[ext_resource type="Texture2D" uid="uid://4pnqi274i6ar" path="res://Sprits/RPG UI pack - Demo (by Franuka)/UI assets Demo (3x).png" id="10_m82ac"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gn1ve"]
 atlas = ExtResource("2_vmdb7")
@@ -227,17 +228,32 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_il5lx"]
-size = Vector2(32.5714, 39.3214)
+size = Vector2(120, 195)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ua084"]
-radius = 39.7145
+radius = 154.446
 
 [sub_resource type="Theme" id="Theme_62kt3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbn57"]
+atlas = ExtResource("10_m82ac")
+region = Rect2(0, 490, 153, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i0mxq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbn57")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="BossOrc" type="CharacterBody2D" groups=["Enemy"]]
 z_index = -1
 texture_filter = 1
-position = Vector2(236, 302)
+position = Vector2(494, 269)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_aluje")
 minion_scene = ExtResource("2_yir64")
@@ -257,7 +273,7 @@ script = ExtResource("2_g8s2n")
 CanMove = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.142857, -2.74107)
+position = Vector2(12.5, -13.7501)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_il5lx")
 
@@ -271,12 +287,24 @@ position = Vector2(0.428573, 0.142857)
 shape = SubResource("CircleShape2D_ua084")
 debug_color = Color(0.96716, 0.140343, 0.29849, 0.42)
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
 [node name="HealthBar" parent="." instance=ExtResource("7_6cmss")]
-offset_left = -137.5
-offset_top = -377.5
-offset_right = 66.5
-offset_bottom = -354.5
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -232.5
+offset_top = -267.5
+offset_right = 35.5
+offset_bottom = -260.5
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(2, 2)
+size_flags_horizontal = 4
 theme = SubResource("Theme_62kt3")
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="HealthBar"]
+z_index = -1
+position = Vector2(143.25, 6.5)
+scale = Vector2(2.15359, 0.914286)
+sprite_frames = SubResource("SpriteFrames_i0mxq")

@@ -1,15 +1,15 @@
-[gd_scene load_steps=19 format=4 uid="uid://cpec22or18sn4"]
+[gd_scene load_steps=17 format=4 uid="uid://cpec22or18sn4"]
 
 [ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_jn3ee"]
 [ext_resource type="Texture2D" uid="uid://cypast1cbeljv" path="res://Sprits/TileMap/Texture/TX Props.png" id="2_cxpyd"]
 [ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="2_krjkp"]
 [ext_resource type="Texture2D" uid="uid://bvwst0itesrbp" path="res://Sprits/TileMap/Texture/TX Plant.png" id="3_aiuwq"]
 [ext_resource type="Texture2D" uid="uid://xn6drg0x15to" path="res://Sprits/TileMap/Texture/TX Struct.png" id="4_8rots"]
-[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="5_4ahxr"]
 [ext_resource type="Texture2D" uid="uid://cmrsvyslsn3dn" path="res://Sprits/TileMap/Texture/TX Tileset Grass.png" id="5_eanb5"]
 [ext_resource type="PackedScene" uid="uid://cko85hyuvvflq" path="res://prefabs/mage.tscn" id="7_3jkpa"]
 [ext_resource type="PackedScene" uid="uid://f5trj24sa8k8" path="res://prefabs/BossOrc.tscn" id="7_t52lc"]
 [ext_resource type="PackedScene" uid="uid://b4x404r63mqp8" path="res://prefabs/magic.tscn" id="9_5opr6"]
+[ext_resource type="PackedScene" uid="uid://c07rkcjw6ndmk" path="res://scenes/ui_2.tscn" id="10_btpcr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6oyq"]
 texture = ExtResource("1_jn3ee")
@@ -2071,18 +2071,6 @@ sources/2 = SubResource("TileSetAtlasSource_fv001")
 sources/3 = SubResource("TileSetAtlasSource_u5pg5")
 sources/4 = SubResource("TileSetAtlasSource_i0s71")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0rns"]
-bg_color = Color(0.064775, 0.259655, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-shadow_size = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2b4db"]
-bg_color = Color(0.27154, 0.62599, 0.247709, 1)
-
 [node name="Node2D" type="Node2D"]
 position = Vector2(64, 195)
 
@@ -2111,43 +2099,11 @@ position = Vector2(2018, 1279)
 speed = 200.0
 attack_range = 100.0
 chase_range = 1000.0
-drop_chance = null
-attack_cooldown = null
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="Node2D"]
-
-[node name="PlayerHealthBar" type="ProgressBar" parent="Node2D/CanvasLayer2" node_paths=PackedStringArray("player")]
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 261.0
-offset_bottom = 38.0
-theme_override_styles/background = SubResource("StyleBoxFlat_d0rns")
-theme_override_styles/fill = SubResource("StyleBoxFlat_2b4db")
-value = 100.0
-script = ExtResource("5_4ahxr")
-player = NodePath("../../Archer")
-metadata/_edit_use_anchors_ = true
-
-[node name="PlayerHealthBar2" type="ProgressBar" parent="Node2D/CanvasLayer2" node_paths=PackedStringArray("player")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -262.0
-offset_top = 7.0
-offset_right = -7.0
-offset_bottom = 38.0
-grow_horizontal = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_d0rns")
-theme_override_styles/fill = SubResource("StyleBoxFlat_2b4db")
-value = 100.0
-script = ExtResource("5_4ahxr")
-player = NodePath("../../Archer2")
-metadata/_edit_use_anchors_ = true
-
 [node name="Archer" parent="Node2D" instance=ExtResource("2_krjkp")]
-position = Vector2(254, 445)
+position = Vector2(1565, 1337)
 scale = Vector2(0.8, 0.799)
 max_health = 150
 
@@ -2160,3 +2116,5 @@ left = "Left2"
 right = "Right2"
 up = "Up2"
 down = "Down2"
+
+[node name="CanvasLayer2" parent="Node2D" instance=ExtResource("10_btpcr")]

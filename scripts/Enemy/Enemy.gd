@@ -59,3 +59,9 @@ func attack(target: Node):
 		can_attack = false
 		await get_tree().create_timer(attack_cooldown).timeout
 		can_attack = true
+		
+func apply_damage(amount: int):
+	current_health -= amount
+
+	if has_node("BossHealthBar"):
+		$BossHealthBar.health = current_health
