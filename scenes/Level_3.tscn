@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://cpec22or18sn4"]
+[gd_scene load_steps=18 format=4 uid="uid://cpec22or18sn4"]
 
+[ext_resource type="AudioStream" uid="uid://dpjmxb2cil1su" path="res://sounds/Elden Ring OST - The Final Battle (Tone Variation w_ Sound effects) [Phase 1 Extended] - The Last Trylobane (youtube).mp3" id="1_0hbqq"]
 [ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_jn3ee"]
 [ext_resource type="Texture2D" uid="uid://cypast1cbeljv" path="res://Sprits/TileMap/Texture/TX Props.png" id="2_cxpyd"]
 [ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="2_krjkp"]
@@ -2073,6 +2074,10 @@ sources/4 = SubResource("TileSetAtlasSource_i0s71")
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(64, 195)
+
+[node name="EldenRingOst-TheFinalBattle(toneVariationWSoundEffects)[phase1Extended]-TheLastTrylobane(youtube)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_0hbqq")
+autoplay = true
 
 [node name="floor" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)

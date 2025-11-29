@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+[gd_scene load_steps=17 format=4 uid="uid://ik8wosot4wqj"]
+=======
 [gd_scene load_steps=14 format=4 uid="uid://ik8wosot4wqj"]
+>>>>>>> 23a428a5bd71d23b1877ff9ac19fbb6c9e504256
 
+[ext_resource type="AudioStream" uid="uid://dujsdq7mhkob4" path="res://sounds/Ghouls'n Ghosts (Arcade) Music- Stage Five - cheetahman91 (youtube).mp3" id="1_7o5a1"]
 [ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_sm8u4"]
 [ext_resource type="Texture2D" uid="uid://ctlclq6bah0rd" path="res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png" id="2_dr67x"]
 [ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="2_k4tky"]
@@ -1112,6 +1117,12 @@ size = Vector2(10.5488, 6.04164)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(64, 195)
+
+[node name="Ghouls\'nGhosts(arcade)Music-StageFive-Cheetahman91(youtube)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_7o5a1")
+pitch_scale = 0.75
+autoplay = true
+parameters/looping = false
 
 [node name="floor" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
