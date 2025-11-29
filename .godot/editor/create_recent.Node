@@ -1,4 +1,9 @@
+Button
+Label
+ColorRect
 CanvasLayer
+AudioStreamPlayer
+TileMapLayer
 AnimatedSprite2D
 Sprite2D
 CollisionShape2D
@@ -6,4 +11,3 @@ Area2D
 Node2D
 CharacterBody2D
 TileMap
-TileMapLayer

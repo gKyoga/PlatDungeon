@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dujsdq7mhkob4"
+path="res://.godot/imported/Ghouls'n Ghosts (Arcade) Music- Stage Five - cheetahman91 (youtube).mp3-f5334742771826ed3fa32d0516753108.mp3str"
+
+[deps]
+
+source_file="res://sounds/Ghouls'n Ghosts (Arcade) Music- Stage Five - cheetahman91 (youtube).mp3"
+dest_files=["res://.godot/imported/Ghouls'n Ghosts (Arcade) Music- Stage Five - cheetahman91 (youtube).mp3-f5334742771826ed3fa32d0516753108.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

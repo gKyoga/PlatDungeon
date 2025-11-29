@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ch1c4x17yvf2"
+path="res://.godot/imported/Fun Naming - Mother 3 - DarkestLink (youtube).mp3-8cfa4edfbd08c51cb42cb9266cc30e99.mp3str"
+
+[deps]
+
+source_file="res://sounds/Fun Naming - Mother 3 - DarkestLink (youtube).mp3"
+dest_files=["res://.godot/imported/Fun Naming - Mother 3 - DarkestLink (youtube).mp3-8cfa4edfbd08c51cb42cb9266cc30e99.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

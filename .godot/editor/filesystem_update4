@@ -7,6 +7,4 @@ res://prefabs/food.tscn
 res://scenes/ui_2.tscn
 res://prefabs/BossOrc.tscn
 res://prefabs/UI/HealthBar.tscn
-res://scenes/bossui.tscn
-res://scripts/Enemy/boss_orc.gd
-res://scripts/Enemy/Enemy.gd
+res://GameOver.tscn

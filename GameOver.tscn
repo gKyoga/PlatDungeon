@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://csmi18w1gerjs"]
+
+[ext_resource type="FontFile" uid="uid://c45jns7g4s1tk" path="res://Sprits/RPG UI pack - Demo (by Franuka)/FantasyRPGtext (size 8).ttf" id="1_y3vpc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 111.0
+offset_top = 74.0
+offset_right = 1036.0
+offset_bottom = 299.0
+theme_override_colors/font_shadow_color = Color(0.37172, 0.549475, 0.741981, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_y3vpc")
+theme_override_font_sizes/font_size = 200
+text = "GAME OVER"
+
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 342.0
+offset_top = 317.0
+offset_right = 792.0
+offset_bottom = 430.0
+theme_override_colors/font_shadow_color = Color(0.37172, 0.549475, 0.741981, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_y3vpc")
+theme_override_font_sizes/font_size = 100
+text = "Try Again?"
+
+[node name="Label3" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 333.0
+offset_top = 442.0
+offset_right = 807.0
+offset_bottom = 555.0
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("1_y3vpc")
+theme_override_font_sizes/font_size = 79
+text = "<Press Start>"
