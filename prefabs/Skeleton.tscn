@@ -258,6 +258,8 @@ shape = SubResource("RectangleShape2D_qhfbj")
 debug_color = Color(0.96716, 0.140343, 0.29849, 0.42)
 
 [node name="HealthBar" parent="." instance=ExtResource("2_oue0l")]
+anchor_left = -0.000868056
+anchor_top = -0.00617284
 offset_left = -36.0
 offset_top = -88.0
 offset_right = 77.0

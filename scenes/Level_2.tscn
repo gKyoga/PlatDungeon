@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=17 format=4 uid="uid://ik8wosot4wqj"]
+=======
+[gd_scene load_steps=14 format=4 uid="uid://ik8wosot4wqj"]
+>>>>>>> 23a428a5bd71d23b1877ff9ac19fbb6c9e504256
 
 [ext_resource type="AudioStream" uid="uid://dujsdq7mhkob4" path="res://sounds/Ghouls'n Ghosts (Arcade) Music- Stage Five - cheetahman91 (youtube).mp3" id="1_7o5a1"]
 [ext_resource type="Texture2D" uid="uid://boan8ivtk0l2f" path="res://Sprits/TileMap/Tilemap Dungeon original size.png" id="1_sm8u4"]
@@ -10,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://sfthdmw8xcgf" path="res://prefabs/Skeleton.tscn" id="7_kbw73"]
 [ext_resource type="PackedScene" uid="uid://clqapeiq5yak7" path="res://prefabs/orc.tscn" id="8_h3uah"]
 [ext_resource type="Script" path="res://scenes/tp.gd" id="9_c2lk6"]
-[ext_resource type="Script" path="res://scenes/revive.gd" id="10_ok4er"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6oyq"]
 texture = ExtResource("1_sm8u4")
@@ -1112,9 +1115,6 @@ sources/1 = SubResource("TileSetAtlasSource_88iby")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tv0jf"]
 size = Vector2(10.5488, 6.04164)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q46e0"]
-size = Vector2(131, 66)
-
 [node name="Node2D" type="Node2D"]
 position = Vector2(64, 195)
 
@@ -1252,14 +1252,4 @@ position = Vector2(94.9487, 57.5717)
 scale = Vector2(0.50424, -1.05839)
 shape = SubResource("RectangleShape2D_tv0jf")
 
-[node name="REVIVE" type="Area2D" parent="."]
-position = Vector2(2322, 518)
-script = ExtResource("10_ok4er")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="REVIVE"]
-position = Vector2(45, 14)
-shape = SubResource("RectangleShape2D_q46e0")
-
 [connection signal="body_entered" from="tp" to="tp" method="_on_body_entered"]
-[connection signal="body_entered" from="REVIVE" to="REVIVE" method="_on_body_entered"]
-[connection signal="input_event" from="REVIVE" to="REVIVE" method="_on_input_event"]

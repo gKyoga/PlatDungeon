@@ -1,97 +1,109 @@
 [gd_scene load_steps=8 format=3 uid="uid://d4he41igw7o84"]
 
-[ext_resource type="PackedScene" uid="uid://bmpl4yem60uf6" path="res://prefabs/Archer.tscn" id="1_ixs1n"]
-[ext_resource type="Script" path="res://CommandSystem/CommandSystem.gd" id="1_u3rg6"]
-[ext_resource type="Script" path="res://scripts/UI/PlayerHealthBar.gd" id="2_70kpu"]
-[ext_resource type="Script" path="res://CommandSystem/Commands.gd" id="3_5la77"]
-[ext_resource type="Script" path="res://scripts/UI/ScoreUI.gd" id="3_oiu4j"]
+[ext_resource type="Texture2D" uid="uid://dukxv3pq6dkg7" path="res://Sprits/RPG UI pack - Demo (by Franuka)/capa.png" id="1_d07v4"]
+[ext_resource type="Script" path="res://scenes/start.gd" id="2_fq0hy"]
+[ext_resource type="Texture2D" uid="uid://dj88ifexp88n4" path="res://Sprits/RPG UI pack - Demo (by Franuka)/UI assets Demo (1x).png" id="2_w70xo"]
+[ext_resource type="FontFile" uid="uid://cn7vbc0051rhm" path="res://Sprits/Pixel Game.otf" id="4_niqc7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lrv5y"]
-bg_color = Color(0.064775, 0.259655, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-shadow_size = 1
+[sub_resource type="AtlasTexture" id="AtlasTexture_idrrb"]
+atlas = ExtResource("2_w70xo")
+region = Rect2(48, 46, 24, 23)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3gfs"]
-bg_color = Color(0.27154, 0.62599, 0.247709, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wovpc"]
+atlas = ExtResource("2_w70xo")
+region = Rect2(72, 46, 24, 23)
 
-[node name="Game" type="Node2D"]
-script = ExtResource("1_u3rg6")
+[sub_resource type="SpriteFrames" id="SpriteFrames_iilei"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idrrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wovpc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wovpc")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Menu" type="Node2D"]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = 21.0
-offset_top = 424.0
-offset_right = 526.0
-offset_bottom = 556.0
-metadata/_edit_use_anchors_ = true
+[node name="Capa" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(978, 536.75)
+scale = Vector2(1.29427, 1.08838)
+texture = ExtResource("1_d07v4")
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
-offset_left = 15.0
-offset_top = 583.0
-offset_right = 506.0
-offset_bottom = 639.0
-metadata/_edit_use_anchors_ = true
-
-[node name="PlayerHealthBar" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 261.0
-offset_bottom = 38.0
-theme_override_styles/background = SubResource("StyleBoxFlat_lrv5y")
-theme_override_styles/fill = SubResource("StyleBoxFlat_d3gfs")
-value = 100.0
-script = ExtResource("2_70kpu")
-metadata/_edit_use_anchors_ = true
-
-[node name="PlayerHealthBar2" type="ProgressBar" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -262.0
-offset_top = 7.0
-offset_right = -7.0
-offset_bottom = 38.0
-grow_horizontal = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_lrv5y")
-theme_override_styles/fill = SubResource("StyleBoxFlat_d3gfs")
-value = 100.0
-script = ExtResource("2_70kpu")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-anchors_preset = 5
+[node name="Start" type="Button" parent="."]
+z_index = 6
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-offset_left = -28.0
-offset_right = 28.0
-offset_bottom = 23.0
+anchor_bottom = 1.0
+offset_left = 910.5
+offset_top = 900.0
+offset_right = 1111.5
+offset_bottom = 944.0
 grow_horizontal = 2
-scale = Vector2(1.6, 1.6)
-text = "Score 0"
-horizontal_alignment = 1
-script = ExtResource("3_oiu4j")
-metadata/_edit_use_anchors_ = true
+grow_vertical = 0
+action_mode = 0
+flat = true
+clip_text = true
+script = ExtResource("2_fq0hy")
 
-[node name="Commands" type="Node" parent="."]
-script = ExtResource("3_5la77")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(1090.5, 935)
+scale = Vector2(6.4375, 4.43478)
+sprite_frames = SubResource("SpriteFrames_iilei")
+animation = &"new_animation"
 
-[node name="Archer" parent="." instance=ExtResource("1_ixs1n")]
-position = Vector2(691, 353)
-scale = Vector2(0.8, 0.799)
-max_health = 150
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(932.5, 935)
+scale = Vector2(7.125, 4.40217)
+sprite_frames = SubResource("SpriteFrames_iilei")
 
-[node name="Archer2" parent="." instance=ExtResource("1_ixs1n")]
-position = Vector2(693, 349)
-scale = Vector2(0.8, 0.799)
-atck = "Atck2"
-dash = "Dash2"
-left = "Left2"
-right = "Right2"
-up = "Up2"
-down = "Down2"
-max_health = 100
+[node name="TextEdit" type="RichTextLabel" parent="."]
+modulate = Color(0.77, 0.1848, 0.1848, 1)
+z_index = -1
+texture_filter = 3
+offset_left = 1013.0
+offset_top = 903.0
+offset_right = 1104.0
+offset_bottom = 944.0
+theme_override_fonts/normal_font = ExtResource("4_niqc7")
+theme_override_font_sizes/normal_font_size = 40
+text = "START
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+tab_size = 11
+
+[node name="TextEdit2" type="RichTextLabel" parent="."]
+modulate = Color(0.77, 0.1848, 0.1848, 1)
+z_index = -1
+texture_filter = 3
+offset_left = 919.0
+offset_top = 903.0
+offset_right = 1010.0
+offset_bottom = 944.0
+theme_override_fonts/normal_font = ExtResource("4_niqc7")
+theme_override_font_sizes/normal_font_size = 40
+text = "PRESS
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+tab_size = 11

@@ -7,4 +7,13 @@ res://prefabs/food.tscn
 res://scenes/ui_2.tscn
 res://prefabs/BossOrc.tscn
 res://prefabs/UI/HealthBar.tscn
-res://GameOver.tscn
+res://scenes/bossui.tscn
+res://scripts/Enemy/boss_orc.gd
+res://scripts/Enemy/Enemy.gd
+res://prefabs/Archer.tscn
+res://prefabs/mage.tscn
+res://prefabs/Skeleton.tscn
+res://scenes/start.gd
+res://scenes/revive.gd
+res://scripts/Player/player.gd
+res://scripts/Player/Archer.gd
