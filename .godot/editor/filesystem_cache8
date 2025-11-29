@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1764383630
+::res://::1764386337
 .gitignore.txt::TextFile::-1::1763850025::0::1::::<><>::
 README.md::TextFile::-1::1763850025::0::1::::<><>::
 ::res://CommandSystem/::1763850025
@@ -7,39 +7,40 @@ Commands.gd::GDScript::-1::1763850025::0::1::::Commands<>Node<>::
 CommandSystem.gd::GDScript::-1::1763850025::0::1::::<>Node<>::
 ::res://Components/::1763850025
 enemy_detect_area.tscn::PackedScene::1963902954458067169::1763850025::0::1::::<><>::res://scenes/enemy_detect_area.gd
-::res://prefabs/::1764383613
-archer2.gd::GDScript::-1::1764380103::0::1::::Archer2<>Player<>::
-Archer.tscn::PackedScene::3260373415931337937::1763850026::0::1::::<><>::res://scripts/Player/Archer.gd<>uid://cefiqj6fenbps::::res://prefabs/arrow.tscn<>uid://b8owsu3rljjvj::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Attack01.png<>uid://carlyowb6eibu::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Idle.png<>uid://ddjgbg4nfg54q::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Walk.png<>uid://kwov2daf58pb::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer/Archer-Death.png<>res://scripts/ZPosCalculator.gd<>uid://28lgvdw4gvh6::::res://Components/enemy_detect_area.tscn
+::res://prefabs/::1764385067
+archer2.gd::GDScript::-1::1764383637::0::1::::Archer2<>Player<>::
+Archer.tscn::PackedScene::3260373415931337937::1764385067::0::1::::<><>::res://scripts/Player/Archer.gd<>uid://cefiqj6fenbps::::res://prefabs/arrow.tscn<>uid://b8owsu3rljjvj::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Attack01.png<>uid://carlyowb6eibu::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Idle.png<>uid://ddjgbg4nfg54q::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Walk.png<>uid://kwov2daf58pb::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer/Archer-Death.png<>res://scripts/ZPosCalculator.gd<>uid://28lgvdw4gvh6::::res://Components/enemy_detect_area.tscn
 arrow.tscn::PackedScene::5064433460185363868::1763850026::0::1::::<><>::res://scripts/Weapons/Arrow.gd<>uid://c47dq8f76gst6::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Arrow(Projectile)/Arrow01(32x32).png
-BossOrc.tscn::PackedScene::414060047932491641::1764383613::0::1::::<><>::res://scripts/Enemy/boss_orc.gd<>res://scripts/ZPosCalculator.gd<>uid://dy4jpvg5h2d5i::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Death.png<>uid://dp5inrkdn0nyq::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Attack03.png<>uid://clqapeiq5yak7::::res://prefabs/orc.tscn<>uid://m3vmhlhxu5w::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Idle.png<>uid://dxmx6gdesar5m::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Walk.png<>uid://dy4rx5blfcedj::::res://prefabs/UI/HealthBar.tscn<>uid://4pnqi274i6ar::::res://Sprits/RPG UI pack - Demo (by Franuka)/UI assets Demo (3x).png
+BossOrc.tscn::PackedScene::414060047932491641::1764385067::0::1::::<><>::res://scripts/Enemy/boss_orc.gd<>res://scripts/ZPosCalculator.gd<>uid://dy4jpvg5h2d5i::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Death.png<>uid://dp5inrkdn0nyq::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Attack03.png<>uid://clqapeiq5yak7::::res://prefabs/orc.tscn<>uid://m3vmhlhxu5w::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Idle.png<>uid://dxmx6gdesar5m::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Walk.png<>uid://dy4rx5blfcedj::::res://prefabs/UI/HealthBar.tscn<>uid://4pnqi274i6ar::::res://Sprits/RPG UI pack - Demo (by Franuka)/UI assets Demo (3x).png
 food.gd::GDScript::-1::1763857054::0::1::::Food<>Area2D<>::
-food.tscn::PackedScene::6497822827497917528::1764383613::0::1::::<><>::res://prefabs/food.gd<>uid://bke4kjtp243i1::::res://Sprits/FreePixelFood/Assets/FreePixelFood/Sprite/Food/ChickenLeg.png
+food.tscn::PackedScene::6497822827497917528::1764385067::0::1::::<><>::res://prefabs/food.gd<>uid://bke4kjtp243i1::::res://Sprits/FreePixelFood/Assets/FreePixelFood/Sprite/Food/ChickenLeg.png
 knight.tscn::PackedScene::405675435216564333::1763850026::0::1::::<><>::res://scripts/Enemy/Skeleton.gd<>uid://cebkhfkocneas::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Axeman/Armored Axeman/Armored Axeman-Attack01.png<>uid://c01i46ejgdqrg::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Axeman/Armored Axeman/Armored Axeman-Walk.png<>uid://chqhc4sfi5i0e::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Axeman/Armored Axeman/Armored Axeman-Death.png<>uid://86da1xtr2j5w::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Axeman/Armored Axeman/Armored Axeman-Idle.png<>res://scripts/ZPosCalculator.gd<>uid://dy4rx5blfcedj::::res://prefabs/UI/HealthBar.tscn
-mage.tscn::PackedScene::5505688732578163090::1763852649::0::1::::<><>::res://scripts/Player/Archer.gd<>uid://cefiqj6fenbps::::res://prefabs/arrow.tscn<>uid://dphcitptaiwtq::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-Attack02.png<>uid://bxg0ipvnoqiv7::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-DEATH.png<>uid://bj5j2jgxthdtb::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-Idle.png<>uid://23xh5bsvv1nd::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-Walk.png<>uid://du28trksyd56x::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-Attack01.png<>res://scripts/ZPosCalculator.gd<>uid://28lgvdw4gvh6::::res://Components/enemy_detect_area.tscn
+mage.tscn::PackedScene::5505688732578163090::1764385067::0::1::::<><>::res://scripts/Player/Archer.gd<>uid://cefiqj6fenbps::::res://prefabs/arrow.tscn<>uid://dphcitptaiwtq::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-Attack02.png<>uid://bxg0ipvnoqiv7::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-DEATH.png<>uid://bj5j2jgxthdtb::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-Idle.png<>uid://23xh5bsvv1nd::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-Walk.png<>uid://du28trksyd56x::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard/Wizard-Attack01.png<>res://scripts/ZPosCalculator.gd<>uid://28lgvdw4gvh6::::res://Components/enemy_detect_area.tscn
 magic.tscn::PackedScene::4471184826062500383::1763852713::0::1::::<><>::res://scripts/Weapons/Arrow.gd<>uid://bopruvb36sgkh::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Magic(Projectile)/Wizard-Attack02_Effect.png
 orc.tscn::PackedScene::5577975701597924628::1763853627::0::1::::<><>::res://scripts/Enemy/Skeleton.gd<>uid://d0g026jdi464i::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc/Armored Orc-Attack01.png<>uid://dpt00yyqf2he2::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc/Armored Orc-Walk.png<>uid://rfw2j6pv6kti::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc/Armored Orc-Death.png<>uid://c5pvjlsh7hkqp::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc/Armored Orc-Idle.png<>res://scripts/ZPosCalculator.gd<>uid://dy4rx5blfcedj::::res://prefabs/UI/HealthBar.tscn
-Skeleton.tscn::PackedScene::1274887374827067233::1763852649::0::1::::<><>::res://scripts/Enemy/Skeleton.gd<>uid://5h8r7g8qv18u::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Walk.png<>uid://conxiut3d8cwr::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Idle.png<>uid://dy4rx5blfcedj::::res://prefabs/UI/HealthBar.tscn<>uid://blhqw8y78nhb4::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Attack01.png<>res://scripts/ZPosCalculator.gd<>uid://difd0dkc28wcc::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Death.png
+Skeleton.tscn::PackedScene::1274887374827067233::1764385067::0::1::::<><>::res://scripts/Enemy/Skeleton.gd<>uid://5h8r7g8qv18u::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Walk.png<>uid://conxiut3d8cwr::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Idle.png<>uid://dy4rx5blfcedj::::res://prefabs/UI/HealthBar.tscn<>uid://blhqw8y78nhb4::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Attack01.png<>res://scripts/ZPosCalculator.gd<>uid://difd0dkc28wcc::::res://Sprits/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Death.png
 Swordsman.tscn::PackedScene::8017618684231269912::1763852649::0::1::::<><>::res://scripts/Enemy/Skeleton.gd
-::res://prefabs/UI/::1764383613
-HealthBar.tscn::PackedScene::8904736093148519807::1764383613::0::1::::<><>::res://scripts/UI/HealthBar.gd
+::res://prefabs/UI/::1764385067
+HealthBar.tscn::PackedScene::8904736093148519807::1764385067::0::1::::<><>::res://scripts/UI/HealthBar.gd
 PlayerHealthBar.tscn::PackedScene::5029172091647496805::1763850026::0::1::::<><>::res://scripts/UI/HealthBar.gd
-::res://scenes/::1764383613
-background.tscn::PackedScene::9209485195123794647::1764383612::0::1::::<><>::uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>res://CommandSystem/CommandSystem.gd<>res://scripts/UI/PlayerHealthBar.gd<>res://CommandSystem/Commands.gd<>res://scripts/UI/ScoreUI.gd
-bossui.tscn::PackedScene::2370958132387997428::1764383613::0::1::::<><>::
+::res://scenes/::1764387079
+background.tscn::PackedScene::9209485195123794647::1764386892::0::1::::<><>::uid://dukxv3pq6dkg7::::res://Sprits/RPG UI pack - Demo (by Franuka)/capa.png<>uid://dj88ifexp88n4::::res://Sprits/RPG UI pack - Demo (by Franuka)/UI assets Demo (1x).png
+bossui.tscn::PackedScene::2370958132387997428::1764385067::0::1::::<><>::
 enemy_detect_area.gd::GDScript::-1::1763850026::0::1::::<>Area2D<>::
-Level_1.tscn::PackedScene::7592803363072438730::1764383612::0::1::::<><>::uid://boan8ivtk0l2f::::res://Sprits/TileMap/Tilemap Dungeon original size.png<>uid://ctlclq6bah0rd::::res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png<>res://scenes/tp.gd<>uid://c07rkcjw6ndmk::::res://scenes/ui_2.tscn<>uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>uid://cko85hyuvvflq::::res://prefabs/mage.tscn
-Level_2.tscn::PackedScene::584198238668091481::1764383613::0::1::::<><>::uid://boan8ivtk0l2f::::res://Sprits/TileMap/Tilemap Dungeon original size.png<>uid://ctlclq6bah0rd::::res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png<>uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>uid://cko85hyuvvflq::::res://prefabs/mage.tscn<>uid://c07rkcjw6ndmk::::res://scenes/ui_2.tscn<>uid://b4x404r63mqp8::::res://prefabs/magic.tscn<>uid://sfthdmw8xcgf::::res://prefabs/Skeleton.tscn<>uid://clqapeiq5yak7::::res://prefabs/orc.tscn<>res://scenes/tp.gd<>res://scenes/revive.gd
-Level_3.tscn::PackedScene::5834102623960073063::1764383613::0::1::::<><>::uid://boan8ivtk0l2f::::res://Sprits/TileMap/Tilemap Dungeon original size.png<>uid://cypast1cbeljv::::res://Sprits/TileMap/Texture/TX Props.png<>uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>uid://bvwst0itesrbp::::res://Sprits/TileMap/Texture/TX Plant.png<>uid://xn6drg0x15to::::res://Sprits/TileMap/Texture/TX Struct.png<>res://scripts/UI/PlayerHealthBar.gd<>uid://cmrsvyslsn3dn::::res://Sprits/TileMap/Texture/TX Tileset Grass.png<>uid://cko85hyuvvflq::::res://prefabs/mage.tscn<>uid://f5trj24sa8k8::::res://prefabs/BossOrc.tscn<>uid://b4x404r63mqp8::::res://prefabs/magic.tscn
+Level_1.tscn::PackedScene::7592803363072438730::1764385066::0::1::::<><>::uid://boan8ivtk0l2f::::res://Sprits/TileMap/Tilemap Dungeon original size.png<>uid://ctlclq6bah0rd::::res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png<>res://scenes/tp.gd<>uid://c07rkcjw6ndmk::::res://scenes/ui_2.tscn<>uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>uid://cko85hyuvvflq::::res://prefabs/mage.tscn
+Level_2.tscn::PackedScene::584198238668091481::1764385066::0::1::::<><>::uid://boan8ivtk0l2f::::res://Sprits/TileMap/Tilemap Dungeon original size.png<>uid://ctlclq6bah0rd::::res://Sprits/TileMap/Texture/Extra/TX Props with Shadow.png<>uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>uid://cko85hyuvvflq::::res://prefabs/mage.tscn<>uid://c07rkcjw6ndmk::::res://scenes/ui_2.tscn<>uid://b4x404r63mqp8::::res://prefabs/magic.tscn<>uid://sfthdmw8xcgf::::res://prefabs/Skeleton.tscn<>uid://clqapeiq5yak7::::res://prefabs/orc.tscn<>res://scenes/tp.gd<>res://scenes/revive.gd
+Level_3.tscn::PackedScene::5834102623960073063::1764385067::0::1::::<><>::uid://boan8ivtk0l2f::::res://Sprits/TileMap/Tilemap Dungeon original size.png<>uid://cypast1cbeljv::::res://Sprits/TileMap/Texture/TX Props.png<>uid://bmpl4yem60uf6::::res://prefabs/Archer.tscn<>uid://bvwst0itesrbp::::res://Sprits/TileMap/Texture/TX Plant.png<>uid://xn6drg0x15to::::res://Sprits/TileMap/Texture/TX Struct.png<>uid://cmrsvyslsn3dn::::res://Sprits/TileMap/Texture/TX Tileset Grass.png<>uid://cko85hyuvvflq::::res://prefabs/mage.tscn<>uid://f5trj24sa8k8::::res://prefabs/BossOrc.tscn<>uid://b4x404r63mqp8::::res://prefabs/magic.tscn<>uid://c07rkcjw6ndmk::::res://scenes/ui_2.tscn
+start.gd::GDScript::-1::1764387079::0::1::::<>Button<>::
 revive.gd::GDScript::-1::1763860140::0::1::::<>Area2D<>::
 tp.gd::GDScript::-1::1763854488::0::1::::<>Area2D<>::
-ui_2.tscn::PackedScene::6594672713274464006::1764383613::0::1::::<><>::res://scripts/UI/PlayerHealthBar.gd<>res://scripts/UI/PlayerHealthBar2.gd<>uid://dj88ifexp88n4::::res://Sprits/RPG UI pack - Demo (by Franuka)/UI assets Demo (1x).png
+ui_2.tscn::PackedScene::6594672713274464006::1764385067::0::1::::<><>::res://scripts/UI/PlayerHealthBar.gd<>res://scripts/UI/PlayerHealthBar2.gd<>uid://dj88ifexp88n4::::res://Sprits/RPG UI pack - Demo (by Franuka)/UI assets Demo (1x).png
 ::res://scripts/::1763850026
 GameManager.gd::GDScript::-1::1763850026::0::1::::<>Node2D<>::
 Global.gd::GDScript::-1::1763850026::0::1::::<>Node<>::
 ZPosCalculator.gd::GDScript::-1::1763850026::0::1::::ZPosCalculator<>Node2D<>::
-::res://scripts/Enemy/::1764383590
-boss_orc.gd::GDScript::-1::1764383590::0::1::::<>Enemy<>::
-Enemy.gd::GDScript::-1::1764383497::0::1::::Enemy<>CharacterBody2D<>::
+::res://scripts/Enemy/::1764384065
+boss_orc.gd::GDScript::-1::1764384058::0::1::::<>Enemy<>::
+Enemy.gd::GDScript::-1::1764384065::0::1::::Enemy<>CharacterBody2D<>::
 Skeleton.gd::GDScript::-1::1763850026::0::1::::<>Enemy<>::
 ::res://scripts/Player/::1763855625
 Archer.gd::GDScript::-1::1763850714::0::1::::Archer<>Player<>::
@@ -52,9 +53,23 @@ PlayerHealthBar.gd::GDScript::-1::1764382090::0::1::::<>ProgressBar<>::
 ScoreUI.gd::GDScript::-1::1763850026::0::1::::<>Label<>::
 ::res://scripts/Weapons/::1763855413
 Arrow.gd::GDScript::-1::1763855413::0::1::::Arrow<>Area2D<>::
-::res://Sprits/::1764380387
+::res://Sprits/::1764387426
+1001fonts-pixel-game-eula.txt::TextFile::-1::1764387426::0::1::::<><>::
+Gemini_Generated_Image_p82rehp82rehp82r.png::CompressedTexture2D::148739296901892789::1764385479::1764385545::1::::<><>::
 healthbarProgress.png::CompressedTexture2D::1126542270584260752::1763850026::1763850060::1::::<><>::
 healthbarUnder.png::CompressedTexture2D::4616566516082428221::1763850026::1763850060::1::::<><>::
+Pixel Game Extrude.otf::FontFile::5278567341417858211::1764387425::1764387430::1::::<><>::
+pixel game font 1.jpg::CompressedTexture2D::6756487464143876887::1764387425::1764387431::1::::<><>::
+pixel game font 2.jpg::CompressedTexture2D::6956960076200903937::1764387425::1764387431::1::::<><>::
+pixel game font 3.jpg::CompressedTexture2D::8787266490758367056::1764387425::1764387431::1::::<><>::
+pixel game font 4.jpg::CompressedTexture2D::2799727481036788124::1764387425::1764387431::1::::<><>::
+pixel game font 5.jpg::CompressedTexture2D::7391444218525652687::1764387425::1764387431::1::::<><>::
+pixel game font 6.jpg::CompressedTexture2D::5269288216881945087::1764387425::1764387431::1::::<><>::
+pixel game font 7.jpg::CompressedTexture2D::2360752294513153205::1764387425::1764387431::1::::<><>::
+pixel game font 8.jpg::CompressedTexture2D::2928221454711672990::1764387425::1764387431::1::::<><>::
+pixel game font 9.jpg::CompressedTexture2D::9071671680815388548::1764387426::1764387432::1::::<><>::
+pixel game font 10.jpg::CompressedTexture2D::2838260423265673805::1764387425::1764387431::1::::<><>::
+Pixel Game.otf::FontFile::5752633410296364750::1764387425::1764387430::1::::<><>::
 ::res://Sprits/FreePixelFood/::1763854878
 ::res://Sprits/FreePixelFood/Assets/::1764380387
 ::res://Sprits/FreePixelFood/Assets/FreePixelFood/::1763854877
@@ -128,7 +143,8 @@ Whiskey.png::CompressedTexture2D::6118472813897837091::1763854878::1763854884::1
 Wine.png::CompressedTexture2D::8190224442710579733::1763854878::1763854884::1::::<><>::
 ::res://Sprits/FreePixelFood/ProjectSettings/::1763854878
 ProjectVersion.txt::TextFile::-1::1763854878::0::1::::<><>::
-::res://Sprits/RPG UI pack - Demo (by Franuka)/::1764380389
+::res://Sprits/RPG UI pack - Demo (by Franuka)/::1764386317
+capa.png::CompressedTexture2D::8585118188480573276::1764386280::1764386317::1::::<><>::
 FantasyRPGtext (size 8).ttf::FontFile::6870819828932744728::1764380320::1764380389::1::::<><>::
 License and details.txt::TextFile::-1::1764380320::0::1::::<><>::
 Reference sheet Demo.png::CompressedTexture2D::8643618176777992220::1764380320::1764380389::1::::<><>::

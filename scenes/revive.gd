@@ -17,9 +17,6 @@ func _process(delta: float) -> void:
 
 
 func reset_player(player: Node2D):
-	# Teleporta o player para a área
-	player.global_position = global_position
-
 	# Reseta a vida
 	if player.has_variable("current_health") and player.has_variable("max_health"):
 		player.current_health = player.max_health

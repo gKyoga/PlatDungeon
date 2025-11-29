@@ -1,9 +1,6 @@
 extends Player
 class_name Archer
 
-
-
-
 # --- Dash ---
 const DASH_SPEED = 900
 const DASH_TIME = 0.2
@@ -31,13 +28,16 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 
-	# PRIORIDADE: se está atacando, não pode trocar animação
+	if current_health <= 0:
+		return
+
+	# PRIORIDADE: atacando
 	if shoting:
 		return
 
 	MovePlayer(delta)
 
-	# D A S H
+	# --- DASH ---
 	if dir != Vector2.ZERO:
 		if Input.is_action_just_pressed(dash) and not dashing and not dash_recharge:
 			start_dash()
@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 			if dash_timer <= 0:
 				dashing = false
 
-	# ROTAÇÃO DO SPRITE DURANTE O DASH
+	# --- ROTAÇÃO ---
 	if rotating:
 		var step = rotation_speed * delta
 		$AnimatedSprite2D.rotation_degrees += step
@@ -62,7 +62,7 @@ func _physics_process(delta: float) -> void:
 			rotated = 0.0
 			$AnimatedSprite2D.rotation_degrees = 0
 
-	# ATAQUE
+	# --- ATAQUE ---
 	if Input.is_action_just_pressed(atck) and not shoting and not shoting_recharge:
 		Arrow_Shoot()
 		shoting_recharge = true
@@ -70,7 +70,7 @@ func _physics_process(delta: float) -> void:
 		shoting_recharge = false
 
 
-# --- Dash ---
+# --- DASH ---
 func start_dash():
 	if dash_count >= 1:
 		dashing = true
@@ -83,22 +83,19 @@ func start_rotation():
 	rotated = 0.0
 
 
-# --- DISPARO DE FLECHA ---
+# --- FLECHA ---
 func Arrow_Shoot() -> void:
 	shoting = true
 
 	$AnimatedSprite2D.play("basic_atack")
 
-	# Tempo real da animação
 	var anim = "basic_atack"
 	var frames = $AnimatedSprite2D.sprite_frames.get_frame_count(anim)
 	var fps = $AnimatedSprite2D.sprite_frames.get_animation_speed(anim)
 	var anim_time = frames / fps
 
-	# Espera terminar a animação
 	await get_tree().create_timer(anim_time).timeout
 
-	# CRIA A FLECHA APÓS A ANIMAÇÃO
 	var arrow = Arrow.instantiate()
 	arrow.global_position = $Bow.global_position + Vector2(-60, -160)
 	arrow.target = $EnemyDetectArea.enemy_target
@@ -107,9 +104,7 @@ func Arrow_Shoot() -> void:
 	shoting = false
 
 
-# --- MORTE ---
 func die():
-	set_physics_process(false)
 	$AnimatedSprite2D.play("Death")
 	await $AnimatedSprite2D.animation_finished
 	super.die()

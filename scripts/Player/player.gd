@@ -1,10 +1,9 @@
 extends CharacterBody2D
-
 class_name Player
 
 signal healthChanged
 
-#status base
+# Status
 var Level = 1
 var Spd = 600
 var Xp = 0
@@ -14,32 +13,26 @@ var Xp = 0
 @export var up = "Up"
 @export var down = "Down"
 
-
 @export var max_health: int = 100
-@onready var current_health: int = max_health:
+var current_health: int
 
-	set(value):
-		current_health = clampi(value, 0, max_health)
-		healthChanged.emit()
-
-#variaveis de movimentação
+# Movimentação
 var dir = Vector2()
 
 func _ready():
-
 	current_health = max_health
 
-func _process(delta: float) -> void:	
-	pass
-	
-func _physics_process(delta: float) -> void:
-	MovePlayer(delta)
-	pass
+func set_health(value: int):
+	current_health = clampi(value, 0, max_health)
+	healthChanged.emit()
 
-#movimentação
+func _physics_process(delta: float) -> void:
+	if current_health > 0:
+		MovePlayer(delta)
+
 func MovePlayer(delta):
 	dir = Vector2()
-	
+
 	if Input.is_action_pressed(up):
 		dir += Vector2.UP
 	if Input.is_action_pressed(down):
@@ -50,23 +43,33 @@ func MovePlayer(delta):
 	if Input.is_action_pressed(right):
 		dir += Vector2.RIGHT
 		$AnimatedSprite2D.flip_h = false
-		
-	elif dir != Vector2.ZERO:
+
+	if dir != Vector2.ZERO:
 		$AnimatedSprite2D.play("Walk")
 	else:
 		$AnimatedSprite2D.play("Idle")
-	
+
 	velocity = dir.normalized() * Spd
 	move_and_slide()
 
+
+# -------- VIDA --------
+
 func take_damage(amount: int):
-	current_health -= amount
+	set_health(current_health - amount)
 	if current_health <= 0:
 		die()
-		
+
 func die():
-	queue_free()
-	
+	# ❌ NÃO MATA O PLAYER
+	# ✔ Apenas desativa até ser revivido
+	print("PLAYER MORREU")
+	set_physics_process(false)
+	visible = false
+
+
+# -------- LEVEL --------
+
 func CalcExpLevel(Level):
 	return 20 * Level * Level
 
